@@ -1,1 +1,1 @@
-web: flask db upgrade; gunicorn beyond-dancing:app
+web: flask db upgrade; gunicorn run_server:app
