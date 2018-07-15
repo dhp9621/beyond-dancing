@@ -1,0 +1,139 @@
+-- Merging decision tree log ---
+manifest
+ADDED from /home/tony/Documents/beyond-dancing/BeyondDancing/Application/src/main/AndroidManifest.xml:17:1-46:12
+INJECTED from /home/tony/Documents/beyond-dancing/BeyondDancing/Application/src/main/AndroidManifest.xml:17:1-46:12
+INJECTED from /home/tony/Documents/beyond-dancing/BeyondDancing/Application/src/main/AndroidManifest.xml:17:1-46:12
+MERGED from [com.android.support:support-v13:27.1.1] /home/tony/.gradle/caches/transforms-1/files-1.1/support-v13-27.1.1.aar/ea6078cba6a8da5abb9a383411aa1a80/AndroidManifest.xml:17:1-22:12
+MERGED from [com.android.support:design:27.1.1] /home/tony/.gradle/caches/transforms-1/files-1.1/design-27.1.1.aar/eae901082d4d02bf967ce8122138e741/AndroidManifest.xml:17:1-22:12
+MERGED from [com.android.support:support-v4:27.1.1] /home/tony/.gradle/caches/transforms-1/files-1.1/support-v4-27.1.1.aar/6e4d8744298794ed173f3fdbca4f256c/AndroidManifest.xml:17:1-22:12
+MERGED from [com.android.support:cardview-v7:27.1.1] /home/tony/.gradle/caches/transforms-1/files-1.1/cardview-v7-27.1.1.aar/e2e00f0b6975ca843e76e8d98e83a9c3/AndroidManifest.xml:17:1-22:12
+MERGED from [com.android.support:appcompat-v7:27.1.1] /home/tony/.gradle/caches/transforms-1/files-1.1/appcompat-v7-27.1.1.aar/4f6e377e3828ab6f6d35a37a627bce88/AndroidManifest.xml:17:1-22:12
+MERGED from [com.android.support:animated-vector-drawable:27.1.1] /home/tony/.gradle/caches/transforms-1/files-1.1/animated-vector-drawable-27.1.1.aar/af3f364e1ef89562c47ca87283544078/AndroidManifest.xml:17:1-22:12
+MERGED from [com.android.support:recyclerview-v7:27.1.1] /home/tony/.gradle/caches/transforms-1/files-1.1/recyclerview-v7-27.1.1.aar/04964672ed9802d93dd8fe7c7a3e8d82/AndroidManifest.xml:17:1-22:12
+MERGED from [com.android.support:support-fragment:27.1.1] /home/tony/.gradle/caches/transforms-1/files-1.1/support-fragment-27.1.1.aar/0a6b82b04aff92ffa76b1d771bedd89c/AndroidManifest.xml:17:1-22:12
+MERGED from [com.android.support:support-core-ui:27.1.1] /home/tony/.gradle/caches/transforms-1/files-1.1/support-core-ui-27.1.1.aar/57eeb9300dc3508adebb55f9eda49ecc/AndroidManifest.xml:17:1-22:12
+MERGED from [com.android.support:support-vector-drawable:27.1.1] /home/tony/.gradle/caches/transforms-1/files-1.1/support-vector-drawable-27.1.1.aar/16ebb4844e3ae9031f84df426e263116/AndroidManifest.xml:17:1-22:12
+MERGED from [com.android.support:transition:27.1.1] /home/tony/.gradle/caches/transforms-1/files-1.1/transition-27.1.1.aar/3af52675d1d2e49a4e475a6acd3f34b7/AndroidManifest.xml:17:1-22:12
+MERGED from [com.android.support:support-core-utils:27.1.1] /home/tony/.gradle/caches/transforms-1/files-1.1/support-core-utils-27.1.1.aar/ddb2f9055f540de57d04fb9f2ef2d22a/AndroidManifest.xml:17:1-22:12
+MERGED from [com.android.support:support-media-compat:27.1.1] /home/tony/.gradle/caches/transforms-1/files-1.1/support-media-compat-27.1.1.aar/8ce68ad34ecc403c96bd15726937ddf5/AndroidManifest.xml:17:1-22:12
+MERGED from [com.android.support:support-compat:27.1.1] /home/tony/.gradle/caches/transforms-1/files-1.1/support-compat-27.1.1.aar/308a8e871aede32ab7a5218f583c89f6/AndroidManifest.xml:17:1-22:12
+MERGED from [android.arch.lifecycle:runtime:1.1.0] /home/tony/.gradle/caches/transforms-1/files-1.1/runtime-1.1.0.aar/979b3d919922c7c74a3d5de7da25ce0e/AndroidManifest.xml:17:1-22:12
+MERGED from [android.arch.lifecycle:livedata-core:1.1.0] /home/tony/.gradle/caches/transforms-1/files-1.1/livedata-core-1.1.0.aar/0163c989943b323f5c2c7e7d98b4bb8e/AndroidManifest.xml:17:1-22:12
+MERGED from [android.arch.core:runtime:1.1.0] /home/tony/.gradle/caches/transforms-1/files-1.1/runtime-1.1.0.aar/3fa5641745fba3f686212e09d5e50127/AndroidManifest.xml:17:1-22:12
+MERGED from [android.arch.lifecycle:viewmodel:1.1.0] /home/tony/.gradle/caches/transforms-1/files-1.1/viewmodel-1.1.0.aar/c9f915797f476f9f9935666da58864c3/AndroidManifest.xml:17:1-22:12
+INJECTED from /home/tony/Documents/beyond-dancing/BeyondDancing/Application/src/main/AndroidManifest.xml:17:1-46:12
+INJECTED from /home/tony/Documents/beyond-dancing/BeyondDancing/Application/src/main/AndroidManifest.xml:17:1-46:12
+	package
+		ADDED from /home/tony/Documents/beyond-dancing/BeyondDancing/Application/src/main/AndroidManifest.xml:18:5-48
+	android:versionName
+		ADDED from /home/tony/Documents/beyond-dancing/BeyondDancing/Application/src/main/AndroidManifest.xml:20:5-30
+		INJECTED from /home/tony/Documents/beyond-dancing/BeyondDancing/Application/src/main/AndroidManifest.xml
+		INJECTED from /home/tony/Documents/beyond-dancing/BeyondDancing/Application/src/main/AndroidManifest.xml
+	xmlns:android
+		ADDED from /home/tony/Documents/beyond-dancing/BeyondDancing/Application/src/main/AndroidManifest.xml:17:11-69
+	android:versionCode
+		ADDED from /home/tony/Documents/beyond-dancing/BeyondDancing/Application/src/main/AndroidManifest.xml:19:5-28
+		INJECTED from /home/tony/Documents/beyond-dancing/BeyondDancing/Application/src/main/AndroidManifest.xml
+		INJECTED from /home/tony/Documents/beyond-dancing/BeyondDancing/Application/src/main/AndroidManifest.xml
+uses-permission#android.permission.CAMERA
+ADDED from /home/tony/Documents/beyond-dancing/BeyondDancing/Application/src/main/AndroidManifest.xml:24:5-64
+	android:name
+		ADDED from /home/tony/Documents/beyond-dancing/BeyondDancing/Application/src/main/AndroidManifest.xml:24:22-62
+uses-permission#android.permission.RECORD_AUDIO
+ADDED from /home/tony/Documents/beyond-dancing/BeyondDancing/Application/src/main/AndroidManifest.xml:25:5-70
+	android:name
+		ADDED from /home/tony/Documents/beyond-dancing/BeyondDancing/Application/src/main/AndroidManifest.xml:25:22-68
+uses-permission#android.permission.WRITE_EXTERNAL_STORAGE
+ADDED from /home/tony/Documents/beyond-dancing/BeyondDancing/Application/src/main/AndroidManifest.xml:26:5-80
+	android:name
+		ADDED from /home/tony/Documents/beyond-dancing/BeyondDancing/Application/src/main/AndroidManifest.xml:26:22-78
+application
+ADDED from /home/tony/Documents/beyond-dancing/BeyondDancing/Application/src/main/AndroidManifest.xml:28:5-44:19
+	android:label
+		ADDED from /home/tony/Documents/beyond-dancing/BeyondDancing/Application/src/main/AndroidManifest.xml:29:9-41
+	android:icon
+		ADDED from /home/tony/Documents/beyond-dancing/BeyondDancing/Application/src/main/AndroidManifest.xml:30:9-45
+	android:allowBackup
+		ADDED from /home/tony/Documents/beyond-dancing/BeyondDancing/Application/src/main/AndroidManifest.xml:28:18-44
+	android:theme
+		ADDED from /home/tony/Documents/beyond-dancing/BeyondDancing/Application/src/main/AndroidManifest.xml:31:9-45
+activity#com.example.android.BeyondDancing.MainActivity
+ADDED from /home/tony/Documents/beyond-dancing/BeyondDancing/Application/src/main/AndroidManifest.xml:33:9-40:20
+	android:label
+		ADDED from /home/tony/Documents/beyond-dancing/BeyondDancing/Application/src/main/AndroidManifest.xml:35:13-45
+	android:theme
+		ADDED from /home/tony/Documents/beyond-dancing/BeyondDancing/Application/src/main/AndroidManifest.xml:34:13-69
+	android:name
+		ADDED from /home/tony/Documents/beyond-dancing/BeyondDancing/Application/src/main/AndroidManifest.xml:33:19-80
+intent-filter#android.intent.action.MAIN+android.intent.category.LAUNCHER
+ADDED from /home/tony/Documents/beyond-dancing/BeyondDancing/Application/src/main/AndroidManifest.xml:36:13-39:29
+action#android.intent.action.MAIN
+ADDED from /home/tony/Documents/beyond-dancing/BeyondDancing/Application/src/main/AndroidManifest.xml:37:17-69
+	android:name
+		ADDED from /home/tony/Documents/beyond-dancing/BeyondDancing/Application/src/main/AndroidManifest.xml:37:25-66
+category#android.intent.category.LAUNCHER
+ADDED from /home/tony/Documents/beyond-dancing/BeyondDancing/Application/src/main/AndroidManifest.xml:38:17-77
+	android:name
+		ADDED from /home/tony/Documents/beyond-dancing/BeyondDancing/Application/src/main/AndroidManifest.xml:38:27-74
+activity#com.example.android.BeyondDancing.PlaybackActivity
+ADDED from /home/tony/Documents/beyond-dancing/BeyondDancing/Application/src/main/AndroidManifest.xml:41:9-96
+	android:name
+		ADDED from /home/tony/Documents/beyond-dancing/BeyondDancing/Application/src/main/AndroidManifest.xml:41:19-84
+activity#com.example.android.BeyondDancing.CameraActivity
+ADDED from /home/tony/Documents/beyond-dancing/BeyondDancing/Application/src/main/AndroidManifest.xml:42:9-61
+	android:name
+		ADDED from /home/tony/Documents/beyond-dancing/BeyondDancing/Application/src/main/AndroidManifest.xml:42:19-49
+activity#com.example.android.BeyondDancing.LoginActivity
+ADDED from /home/tony/Documents/beyond-dancing/BeyondDancing/Application/src/main/AndroidManifest.xml:43:9-60
+	android:name
+		ADDED from /home/tony/Documents/beyond-dancing/BeyondDancing/Application/src/main/AndroidManifest.xml:43:19-48
+uses-sdk
+INJECTED from /home/tony/Documents/beyond-dancing/BeyondDancing/Application/src/main/AndroidManifest.xml reason: use-sdk injection requested
+INJECTED from /home/tony/Documents/beyond-dancing/BeyondDancing/Application/src/main/AndroidManifest.xml
+INJECTED from /home/tony/Documents/beyond-dancing/BeyondDancing/Application/src/main/AndroidManifest.xml
+MERGED from [com.android.support:support-v13:27.1.1] /home/tony/.gradle/caches/transforms-1/files-1.1/support-v13-27.1.1.aar/ea6078cba6a8da5abb9a383411aa1a80/AndroidManifest.xml:20:5-44
+MERGED from [com.android.support:support-v13:27.1.1] /home/tony/.gradle/caches/transforms-1/files-1.1/support-v13-27.1.1.aar/ea6078cba6a8da5abb9a383411aa1a80/AndroidManifest.xml:20:5-44
+MERGED from [com.android.support:design:27.1.1] /home/tony/.gradle/caches/transforms-1/files-1.1/design-27.1.1.aar/eae901082d4d02bf967ce8122138e741/AndroidManifest.xml:20:5-44
+MERGED from [com.android.support:design:27.1.1] /home/tony/.gradle/caches/transforms-1/files-1.1/design-27.1.1.aar/eae901082d4d02bf967ce8122138e741/AndroidManifest.xml:20:5-44
+MERGED from [com.android.support:support-v4:27.1.1] /home/tony/.gradle/caches/transforms-1/files-1.1/support-v4-27.1.1.aar/6e4d8744298794ed173f3fdbca4f256c/AndroidManifest.xml:20:5-44
+MERGED from [com.android.support:support-v4:27.1.1] /home/tony/.gradle/caches/transforms-1/files-1.1/support-v4-27.1.1.aar/6e4d8744298794ed173f3fdbca4f256c/AndroidManifest.xml:20:5-44
+MERGED from [com.android.support:cardview-v7:27.1.1] /home/tony/.gradle/caches/transforms-1/files-1.1/cardview-v7-27.1.1.aar/e2e00f0b6975ca843e76e8d98e83a9c3/AndroidManifest.xml:20:5-44
+MERGED from [com.android.support:cardview-v7:27.1.1] /home/tony/.gradle/caches/transforms-1/files-1.1/cardview-v7-27.1.1.aar/e2e00f0b6975ca843e76e8d98e83a9c3/AndroidManifest.xml:20:5-44
+MERGED from [com.android.support:appcompat-v7:27.1.1] /home/tony/.gradle/caches/transforms-1/files-1.1/appcompat-v7-27.1.1.aar/4f6e377e3828ab6f6d35a37a627bce88/AndroidManifest.xml:20:5-44
+MERGED from [com.android.support:appcompat-v7:27.1.1] /home/tony/.gradle/caches/transforms-1/files-1.1/appcompat-v7-27.1.1.aar/4f6e377e3828ab6f6d35a37a627bce88/AndroidManifest.xml:20:5-44
+MERGED from [com.android.support:animated-vector-drawable:27.1.1] /home/tony/.gradle/caches/transforms-1/files-1.1/animated-vector-drawable-27.1.1.aar/af3f364e1ef89562c47ca87283544078/AndroidManifest.xml:20:5-44
+MERGED from [com.android.support:animated-vector-drawable:27.1.1] /home/tony/.gradle/caches/transforms-1/files-1.1/animated-vector-drawable-27.1.1.aar/af3f364e1ef89562c47ca87283544078/AndroidManifest.xml:20:5-44
+MERGED from [com.android.support:recyclerview-v7:27.1.1] /home/tony/.gradle/caches/transforms-1/files-1.1/recyclerview-v7-27.1.1.aar/04964672ed9802d93dd8fe7c7a3e8d82/AndroidManifest.xml:20:5-44
+MERGED from [com.android.support:recyclerview-v7:27.1.1] /home/tony/.gradle/caches/transforms-1/files-1.1/recyclerview-v7-27.1.1.aar/04964672ed9802d93dd8fe7c7a3e8d82/AndroidManifest.xml:20:5-44
+MERGED from [com.android.support:support-fragment:27.1.1] /home/tony/.gradle/caches/transforms-1/files-1.1/support-fragment-27.1.1.aar/0a6b82b04aff92ffa76b1d771bedd89c/AndroidManifest.xml:20:5-44
+MERGED from [com.android.support:support-fragment:27.1.1] /home/tony/.gradle/caches/transforms-1/files-1.1/support-fragment-27.1.1.aar/0a6b82b04aff92ffa76b1d771bedd89c/AndroidManifest.xml:20:5-44
+MERGED from [com.android.support:support-core-ui:27.1.1] /home/tony/.gradle/caches/transforms-1/files-1.1/support-core-ui-27.1.1.aar/57eeb9300dc3508adebb55f9eda49ecc/AndroidManifest.xml:20:5-44
+MERGED from [com.android.support:support-core-ui:27.1.1] /home/tony/.gradle/caches/transforms-1/files-1.1/support-core-ui-27.1.1.aar/57eeb9300dc3508adebb55f9eda49ecc/AndroidManifest.xml:20:5-44
+MERGED from [com.android.support:support-vector-drawable:27.1.1] /home/tony/.gradle/caches/transforms-1/files-1.1/support-vector-drawable-27.1.1.aar/16ebb4844e3ae9031f84df426e263116/AndroidManifest.xml:20:5-44
+MERGED from [com.android.support:support-vector-drawable:27.1.1] /home/tony/.gradle/caches/transforms-1/files-1.1/support-vector-drawable-27.1.1.aar/16ebb4844e3ae9031f84df426e263116/AndroidManifest.xml:20:5-44
+MERGED from [com.android.support:transition:27.1.1] /home/tony/.gradle/caches/transforms-1/files-1.1/transition-27.1.1.aar/3af52675d1d2e49a4e475a6acd3f34b7/AndroidManifest.xml:20:5-44
+MERGED from [com.android.support:transition:27.1.1] /home/tony/.gradle/caches/transforms-1/files-1.1/transition-27.1.1.aar/3af52675d1d2e49a4e475a6acd3f34b7/AndroidManifest.xml:20:5-44
+MERGED from [com.android.support:support-core-utils:27.1.1] /home/tony/.gradle/caches/transforms-1/files-1.1/support-core-utils-27.1.1.aar/ddb2f9055f540de57d04fb9f2ef2d22a/AndroidManifest.xml:20:5-44
+MERGED from [com.android.support:support-core-utils:27.1.1] /home/tony/.gradle/caches/transforms-1/files-1.1/support-core-utils-27.1.1.aar/ddb2f9055f540de57d04fb9f2ef2d22a/AndroidManifest.xml:20:5-44
+MERGED from [com.android.support:support-media-compat:27.1.1] /home/tony/.gradle/caches/transforms-1/files-1.1/support-media-compat-27.1.1.aar/8ce68ad34ecc403c96bd15726937ddf5/AndroidManifest.xml:20:5-44
+MERGED from [com.android.support:support-media-compat:27.1.1] /home/tony/.gradle/caches/transforms-1/files-1.1/support-media-compat-27.1.1.aar/8ce68ad34ecc403c96bd15726937ddf5/AndroidManifest.xml:20:5-44
+MERGED from [com.android.support:support-compat:27.1.1] /home/tony/.gradle/caches/transforms-1/files-1.1/support-compat-27.1.1.aar/308a8e871aede32ab7a5218f583c89f6/AndroidManifest.xml:20:5-44
+MERGED from [com.android.support:support-compat:27.1.1] /home/tony/.gradle/caches/transforms-1/files-1.1/support-compat-27.1.1.aar/308a8e871aede32ab7a5218f583c89f6/AndroidManifest.xml:20:5-44
+MERGED from [android.arch.lifecycle:runtime:1.1.0] /home/tony/.gradle/caches/transforms-1/files-1.1/runtime-1.1.0.aar/979b3d919922c7c74a3d5de7da25ce0e/AndroidManifest.xml:20:5-44
+MERGED from [android.arch.lifecycle:runtime:1.1.0] /home/tony/.gradle/caches/transforms-1/files-1.1/runtime-1.1.0.aar/979b3d919922c7c74a3d5de7da25ce0e/AndroidManifest.xml:20:5-44
+MERGED from [android.arch.lifecycle:livedata-core:1.1.0] /home/tony/.gradle/caches/transforms-1/files-1.1/livedata-core-1.1.0.aar/0163c989943b323f5c2c7e7d98b4bb8e/AndroidManifest.xml:20:5-44
+MERGED from [android.arch.lifecycle:livedata-core:1.1.0] /home/tony/.gradle/caches/transforms-1/files-1.1/livedata-core-1.1.0.aar/0163c989943b323f5c2c7e7d98b4bb8e/AndroidManifest.xml:20:5-44
+MERGED from [android.arch.core:runtime:1.1.0] /home/tony/.gradle/caches/transforms-1/files-1.1/runtime-1.1.0.aar/3fa5641745fba3f686212e09d5e50127/AndroidManifest.xml:20:5-44
+MERGED from [android.arch.core:runtime:1.1.0] /home/tony/.gradle/caches/transforms-1/files-1.1/runtime-1.1.0.aar/3fa5641745fba3f686212e09d5e50127/AndroidManifest.xml:20:5-44
+MERGED from [android.arch.lifecycle:viewmodel:1.1.0] /home/tony/.gradle/caches/transforms-1/files-1.1/viewmodel-1.1.0.aar/c9f915797f476f9f9935666da58864c3/AndroidManifest.xml:20:5-44
+MERGED from [android.arch.lifecycle:viewmodel:1.1.0] /home/tony/.gradle/caches/transforms-1/files-1.1/viewmodel-1.1.0.aar/c9f915797f476f9f9935666da58864c3/AndroidManifest.xml:20:5-44
+INJECTED from /home/tony/Documents/beyond-dancing/BeyondDancing/Application/src/main/AndroidManifest.xml
+INJECTED from /home/tony/Documents/beyond-dancing/BeyondDancing/Application/src/main/AndroidManifest.xml
+	android:targetSdkVersion
+		INJECTED from /home/tony/Documents/beyond-dancing/BeyondDancing/Application/src/main/AndroidManifest.xml
+		ADDED from /home/tony/Documents/beyond-dancing/BeyondDancing/Application/src/main/AndroidManifest.xml
+		INJECTED from /home/tony/Documents/beyond-dancing/BeyondDancing/Application/src/main/AndroidManifest.xml
+	android:minSdkVersion
+		INJECTED from /home/tony/Documents/beyond-dancing/BeyondDancing/Application/src/main/AndroidManifest.xml
+		ADDED from /home/tony/Documents/beyond-dancing/BeyondDancing/Application/src/main/AndroidManifest.xml
+		INJECTED from /home/tony/Documents/beyond-dancing/BeyondDancing/Application/src/main/AndroidManifest.xml
