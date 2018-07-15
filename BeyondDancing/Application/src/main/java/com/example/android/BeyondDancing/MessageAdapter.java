@@ -43,7 +43,7 @@ public class MessageAdapter extends ArrayAdapter<BasicVideo>{
         convertView.setOnClickListener(new View.OnClickListener() {
             @Override
             public void onClick(View view) {
-                Intent intent = new Intent(getContext(), PlaybackActivity.class);
+                Intent intent = new Intent(getContext(), WatchvideoActivity.class);
                 getContext().startActivity(intent);
             }
         });

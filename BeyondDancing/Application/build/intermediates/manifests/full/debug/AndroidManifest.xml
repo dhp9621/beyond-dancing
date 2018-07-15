@@ -64,6 +64,9 @@
             android:name="com.example.android.BeyondDancing.LoginActivity"
             android:screenOrientation="sensorPortrait" />
         <activity
+            android:name="com.example.android.BeyondDancing.WatchvideoActivity"
+            android:screenOrientation="sensorPortrait" />
+        <activity
             android:name="com.google.firebase.auth.internal.FederatedSignInActivity"
             android:excludeFromRecents="true"
             android:exported="true"

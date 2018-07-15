@@ -1,10 +1,10 @@
 {
     "logs": [
         {
-            "outputFile": "/home/tony/Documents/beyond-dancing/BeyondDancing/Application/build/intermediates/incremental/mergeDebugResources/merged.dir/values-v23/values-v23.xml",
+            "outputFile": "C:\\Users\\jackp\\Documents\\GitHub\\beyond-dancing\\BeyondDancing\\Application\\build\\intermediates\\incremental\\mergeDebugResources\\merged.dir\\values-v23\\values-v23.xml",
             "map": [
                 {
-                    "source": "/home/tony/.gradle/caches/transforms-1/files-1.1/appcompat-v7-27.1.1.aar/b7f25d5b3d579644bbef480a41214eec/res/values-v23/values-v23.xml",
+                    "source": "C:\\Users\\jackp\\.gradle\\caches\\transforms-1\\files-1.1\\appcompat-v7-27.1.1.aar\\b12ea11bc1a67b5c2734d374fe0ab7dd\\res\\values-v23\\values-v23.xml",
                     "from": {
                         "startLines": "2,3,4,5,6,19,32,33,34,35,36",
                         "startColumns": "4,4,4,4,4,4,4,4,4,4,4",
@@ -15,7 +15,7 @@
                     }
                 },
                 {
-                    "source": "/home/tony/.gradle/caches/transforms-1/files-1.1/cardview-v7-27.1.1.aar/2387d4ab5d55918dfd3e407079a8373b/res/values-v23/values-v23.xml",
+                    "source": "C:\\Users\\jackp\\.gradle\\caches\\transforms-1\\files-1.1\\cardview-v7-27.1.1.aar\\3758400bf14084e4c4bab88ab1310811\\res\\values-v23\\values-v23.xml",
                     "from": {
                         "startLines": "2",
                         "startColumns": "4",

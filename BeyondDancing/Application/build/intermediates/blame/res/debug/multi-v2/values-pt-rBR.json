@@ -1,10 +1,10 @@
 {
     "logs": [
         {
-            "outputFile": "/home/tony/Documents/beyond-dancing/BeyondDancing/Application/build/intermediates/incremental/mergeDebugResources/merged.dir/values-pt-rBR/values-pt-rBR.xml",
+            "outputFile": "C:\\Users\\jackp\\Documents\\GitHub\\beyond-dancing\\BeyondDancing\\Application\\build\\intermediates\\incremental\\mergeDebugResources\\merged.dir\\values-pt-rBR\\values-pt-rBR.xml",
             "map": [
                 {
-                    "source": "/home/tony/.gradle/caches/transforms-1/files-1.1/appcompat-v7-27.1.1.aar/b7f25d5b3d579644bbef480a41214eec/res/values-pt-rBR/values-pt-rBR.xml",
+                    "source": "C:\\Users\\jackp\\.gradle\\caches\\transforms-1\\files-1.1\\appcompat-v7-27.1.1.aar\\b12ea11bc1a67b5c2734d374fe0ab7dd\\res\\values-pt-rBR\\values-pt-rBR.xml",
                     "from": {
                         "startLines": "2,3,4,5,6,7,8,9,10,11,12,13,14,15,16,17,18,19",
                         "startColumns": "4,4,4,4,4,4,4,4,4,4,4,4,4,4,4,4,4,4",
@@ -21,7 +21,7 @@
                     }
                 },
                 {
-                    "source": "/home/tony/.gradle/caches/transforms-1/files-1.1/play-services-base-15.0.1.aar/8fcfa348f8d19f778f46ce2bb5be3cf4/res/values-pt-rBR/values.xml",
+                    "source": "C:\\Users\\jackp\\.gradle\\caches\\transforms-1\\files-1.1\\play-services-base-15.0.1.aar\\551d8dad28d4058c8e68c57b559c9dfc\\res\\values-pt-rBR\\values.xml",
                     "from": {
                         "startLines": "4,5,6,7,8,9,10,11,12,13,14,15,16,17,18,19,20",
                         "startColumns": "0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0",
@@ -38,24 +38,7 @@
                     }
                 },
                 {
-                    "source": "/home/tony/.gradle/caches/transforms-1/files-1.1/play-services-basement-15.0.1.aar/21ea6afa8a9e76079ee404a3f251ce22/res/values-pt-rBR/values.xml",
-                    "from": {
-                        "startLines": "4",
-                        "startColumns": "0",
-                        "startOffsets": "251",
-                        "endColumns": "203",
-                        "endOffsets": "454"
-                    },
-                    "to": {
-                        "startLines": "27",
-                        "startColumns": "4",
-                        "startOffsets": "3074",
-                        "endColumns": "203",
-                        "endOffsets": "3273"
-                    }
-                },
-                {
-                    "source": "/home/tony/.gradle/caches/transforms-1/files-1.1/support-compat-27.1.1.aar/e38afce5f69e3d1f96962812fe39230e/res/values-pt-rBR/values-pt-rBR.xml",
+                    "source": "C:\\Users\\jackp\\.gradle\\caches\\transforms-1\\files-1.1\\support-compat-27.1.1.aar\\17463341f3b8bf715f43a171be8c4e76\\res\\values-pt-rBR\\values-pt-rBR.xml",
                     "from": {
                         "startLines": "2",
                         "startColumns": "4",
@@ -69,6 +52,23 @@
                         "startOffsets": "4740",
                         "endColumns": "100",
                         "endOffsets": "4836"
+                    }
+                },
+                {
+                    "source": "C:\\Users\\jackp\\.gradle\\caches\\transforms-1\\files-1.1\\play-services-basement-15.0.1.aar\\ac6f77873e8f108cdb2d5b953f7ba364\\res\\values-pt-rBR\\values.xml",
+                    "from": {
+                        "startLines": "4",
+                        "startColumns": "0",
+                        "startOffsets": "251",
+                        "endColumns": "203",
+                        "endOffsets": "454"
+                    },
+                    "to": {
+                        "startLines": "27",
+                        "startColumns": "4",
+                        "startOffsets": "3074",
+                        "endColumns": "203",
+                        "endOffsets": "3273"
                     }
                 }
             ]

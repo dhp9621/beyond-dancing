@@ -1,10 +1,10 @@
 {
     "logs": [
         {
-            "outputFile": "/home/tony/Documents/beyond-dancing/BeyondDancing/Application/build/intermediates/incremental/mergeDebugResources/merged.dir/values-v18/values-v18.xml",
+            "outputFile": "C:\\Users\\jackp\\Documents\\GitHub\\beyond-dancing\\BeyondDancing\\Application\\build\\intermediates\\incremental\\mergeDebugResources\\merged.dir\\values-v18\\values-v18.xml",
             "map": [
                 {
-                    "source": "/home/tony/.gradle/caches/transforms-1/files-1.1/appcompat-v7-27.1.1.aar/b7f25d5b3d579644bbef480a41214eec/res/values-v18/values-v18.xml",
+                    "source": "C:\\Users\\jackp\\.gradle\\caches\\transforms-1\\files-1.1\\appcompat-v7-27.1.1.aar\\b12ea11bc1a67b5c2734d374fe0ab7dd\\res\\values-v18\\values-v18.xml",
                     "from": {
                         "startLines": "2",
                         "startColumns": "4",

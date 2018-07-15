@@ -43,6 +43,8 @@
         <activity android:name=".CameraActivity"></activity>
         <activity android:name=".LoginActivity"
             android:screenOrientation="sensorPortrait"></activity>
+        <activity android:name=".WatchvideoActivity"
+            android:screenOrientation="sensorPortrait"/>
     </application>
 
 </manifest>
