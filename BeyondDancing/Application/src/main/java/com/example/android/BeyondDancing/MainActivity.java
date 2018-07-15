@@ -17,6 +17,8 @@ import android.view.Menu;
 import android.view.MenuItem;
 import android.view.View;
 
+import com.google.android.gms.auth.api.signin.GoogleSignInClient;
+
 public class MainActivity extends AppCompatActivity{
     public static final int REQUEST_CODE_SIGN_IN = 8001;
     private Toolbar myToolbar;

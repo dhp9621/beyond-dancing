@@ -52,9 +52,6 @@
         <activity
             android:name="com.example.android.BeyondDancing.LoginActivity"
             android:screenOrientation="sensorPortrait" />
-        <activity
-            android:name="com.example.android.BeyondDancing.SignupActivity"
-            android:screenOrientation="sensorPortrait" />
 
         <provider
             android:name="com.android.tools.ir.server.InstantRunContentProvider"

@@ -43,8 +43,6 @@
         <activity android:name=".CameraActivity"></activity>
         <activity android:name=".LoginActivity"
             android:screenOrientation="sensorPortrait"></activity>
-        <activity android:name=".SignupActivity"
-            android:screenOrientation="sensorPortrait"></activity>
     </application>
 
 </manifest>

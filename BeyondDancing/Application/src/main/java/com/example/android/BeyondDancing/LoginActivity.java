@@ -4,130 +4,85 @@ import android.app.Activity;
 import android.content.Intent;
 import android.os.Bundle;
 import android.support.annotation.Nullable;
+import android.util.Log;
 import android.view.View;
 import android.widget.Button;
 import android.widget.EditText;
 import android.widget.Toast;
 
+import com.google.android.gms.auth.api.signin.GoogleSignIn;
+import com.google.android.gms.auth.api.signin.GoogleSignInAccount;
+import com.google.android.gms.auth.api.signin.GoogleSignInClient;
+import com.google.android.gms.auth.api.signin.GoogleSignInOptions;
+import com.google.android.gms.common.api.ApiException;
+import com.google.android.gms.tasks.Task;
+import com.loopj.android.http.AsyncHttpClient;
+import com.loopj.android.http.AsyncHttpResponseHandler;
+import com.loopj.android.http.RequestParams;
+
 import java.util.Observable;
 import java.util.Observer;
 
+import cz.msebera.android.httpclient.Header;
 
 
-
-public class LoginActivity extends Activity implements Observer {
-    DanceModel DModel;
-    Button LoginButton;
-    Button NewSignIn;
-    EditText UsernameEntry;
-    EditText PasswordEntry;
-
-    String usernamestr;
-    String passwordstr;
-    //ProgressDIalog instead of progressbar, freeze screen so user don't back out during login in or signup
-    //  final ProgressDialog progressDialog = new ProgressDialog(LoginActivity.this, R.style.Theme_AppCompat_DayNight_DarkActionBar);
-
+public class LoginActivity extends Activity {
+    private static final String TAG = "GoogleActivity";
+    private static final int RC_SIGN_IN = 9001;
+    private GoogleSignInClient mGoogleSignInClient;
     protected void onCreate(Bundle savedInstanceState)
     {
         super.onCreate(savedInstanceState);
-        DModel = DanceModel.getInstance();
 
         setContentView(R.layout.activity_login);
-
-        //progressDialog.setIndeterminate(true);
-        //progressDialog.setMessage("Logining in...");
-        UsernameEntry =findViewById(R.id.usernameentry);
-        PasswordEntry =findViewById(R.id.passwordentry);
-        LoginButton =findViewById(R.id.loginbutton);
-        NewSignIn =findViewById(R.id.newsignup);
-        usernamestr = "";
-        passwordstr = "";
-                NewSignIn.setOnClickListener(new View.OnClickListener() {
+        GoogleSignInOptions gso = new GoogleSignInOptions.Builder(GoogleSignInOptions.DEFAULT_SIGN_IN)
+                .requestIdToken(getString(R.string.server_client_id))
+                .requestEmail()
+                .build();
+        mGoogleSignInClient = GoogleSignIn.getClient(this, gso);
+        findViewById(R.id.sign_in_button).setOnClickListener(new View.OnClickListener() {
             @Override
-            public void onClick(View v) {
-                Intent intent = new Intent( v.getContext(),SignupActivity.class);
-                startActivity(intent);
+            public void onClick(View view) {
+                Intent signInIntent = mGoogleSignInClient.getSignInIntent();
+                startActivityForResult(signInIntent, RC_SIGN_IN);
             }
         });
-        LoginButton.setOnClickListener(new View.OnClickListener() {
-            @Override
-            public void onClick(View v) {
-                LogIn();
-            }
-        });
-
-
-        DModel.addObserver(this);
-
-
-
-    }
-
-    private void LogIn(){
-        usernamestr = UsernameEntry.getText().toString();
-        passwordstr = PasswordEntry.getText().toString();
-        if(checkValid()){
-            if(true) {
-                Toast.makeText(this, "Welcome: " + usernamestr,
-                        Toast.LENGTH_LONG).show();
-
-                SignUpreset();
-                Intent intent = new Intent( this,MainActivity.class);
-                startActivity(intent);
-            } else {
-                Toast.makeText( this, "Login failed!",
-                        Toast.LENGTH_LONG).show();
-
-            }
-
-        }else{
-            Toast.makeText( this, "invalid entry, retry!",
-                    Toast.LENGTH_LONG).show();
-        }
-    }
-    private void SignUpreset(){
-        usernamestr ="";
-        passwordstr ="";
-        UsernameEntry.setText("");
-        PasswordEntry.setText("");
     }
 
 
-    private boolean checkValid(){
-        boolean result = true;
-        if (usernamestr.isEmpty() || usernamestr.length() <   5 || usernamestr.length() > 15) {
-            result = false;
-            UsernameEntry.setError("between 5 and 15  characters");
-        } else {
-            UsernameEntry.setError(null);
-        }
-
-        if (passwordstr.isEmpty() || passwordstr.length() <  8 || passwordstr.length() > 16) {
-            result = false;
-            PasswordEntry.setError("between 8 and 16  characters");
-        } else {
-            PasswordEntry.setError(null);
-        }
-        return result;
-    }
-
-    ////////////////////////////////////////////////////////////////////////////////////////////////
-    //
-    // Observer Methods
-    //
-    ////////////////////////////////////////////////////////////////////////////////////////////////
-
-    //
     @Override
-    public void update(Observable o, Object arg) {
+    public void onActivityResult(int requestCode, int resultCode, Intent data) {
+        super.onActivityResult(requestCode, resultCode, data);
+        Log.d("ABCD", "We got");
+        // Result returned from launching the Intent from GoogleSignInApi.getSignInIntent(...);
+        if (requestCode == RC_SIGN_IN) {
+            Task<GoogleSignInAccount> task = GoogleSignIn.getSignedInAccountFromIntent(data);
+            try {
+                GoogleSignInAccount account = task.getResult(ApiException.class);
+                String idToken = account.getIdToken();
+                Log.d("IDTOKEN", "id token is: " + idToken);
 
-    }
-    protected void onDestroy()
-    {
-        super.onDestroy();
+                AsyncHttpClient client = new AsyncHttpClient();
+                RequestParams params = new RequestParams("oauth_token", idToken);
+                client.post("http://10.0.2.2:5000/auth/google", params, new AsyncHttpResponseHandler() {
+                    @Override
+                    public void onSuccess(int statusCode, Header[] headers, byte[] responseBody) {
+                        Log.d(TAG, "Google sign in passes David");
+                    }
 
+                    @Override
+                    public void onFailure(int statusCode, Header[] headers, byte[] responseBody, Throwable error) {
+                        Log.w(TAG, "signInResult:failed code=" + statusCode);
 
-        // Remove observer when activity is destroyed.
-        DModel.deleteObserver(this);
+                    }
+                });
+
+            } catch (ApiException e) {
+                // Google Sign In failed, update UI appropriately
+                Log.w(TAG, "signInResult:failed code=" + e.getStatusCode());
+                Toast.makeText(this, "Sign in failed", Toast.LENGTH_LONG).show();
+
+            }
+        }
     }
 }
