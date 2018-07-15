@@ -39,6 +39,7 @@
         <activity
             android:name="com.example.android.BeyondDancing.MainActivity"
             android:label="@string/app_name"
+            android:screenOrientation="sensorPortrait"
             android:theme="@style/Theme.AppCompat.Light.NoActionBar" >
             <intent-filter>
                 <action android:name="android.intent.action.MAIN" />
@@ -48,7 +49,12 @@
         </activity>
         <activity android:name="com.example.android.BeyondDancing.PlaybackActivity" />
         <activity android:name="com.example.android.BeyondDancing.CameraActivity" />
-        <activity android:name="com.example.android.BeyondDancing.LoginActivity" />
+        <activity
+            android:name="com.example.android.BeyondDancing.LoginActivity"
+            android:screenOrientation="sensorPortrait" />
+        <activity
+            android:name="com.example.android.BeyondDancing.SignupActivity"
+            android:screenOrientation="sensorPortrait" />
 
         <provider
             android:name="com.android.tools.ir.server.InstantRunContentProvider"
