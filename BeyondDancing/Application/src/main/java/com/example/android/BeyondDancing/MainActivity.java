@@ -65,7 +65,11 @@ public class MainActivity extends AppCompatActivity{
                     case R.id.navigation_signin:
                         Intent intent = new Intent(getApplicationContext(), LoginActivity.class);
                         startActivityForResult(intent, REQUEST_CODE_SIGN_IN);
+                        inflateMenu(R.menu.signout_menu);
                         break;
+                    case R.id.navigation_signout:
+                        //signout function
+                        inflateMenu(R.menu.main_menu);
                 }
                 mDrawerLayout.closeDrawers();
                 return false;
@@ -99,5 +103,19 @@ public class MainActivity extends AppCompatActivity{
             }
         });
         return true;
+    }
+
+    @Override
+    protected void onActivityResult(int requestCode, int resultCode, Intent data) {
+        if (requestCode == REQUEST_CODE_SIGN_IN) {
+            if (resultCode == RESULT_OK) {
+                inflateMenu(R.menu.signout_menu);
+            }
+        }
+    }
+
+    public void inflateMenu(int defaultLayout) {
+        mNavigationView.getMenu().clear();
+        mNavigationView.inflateMenu(defaultLayout);
     }
 }

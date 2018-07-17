@@ -1,21 +1,21 @@
 {
   "project_info": {
-    "project_number": "610437522620",
-    "firebase_url": "https://beyond-dancing.firebaseio.com",
-    "project_id": "beyond-dancing",
-    "storage_bucket": "beyond-dancing.appspot.com"
+    "project_number": "592751149981",
+    "firebase_url": "https://beyonddancing-472a9.firebaseio.com",
+    "project_id": "beyonddancing-472a9",
+    "storage_bucket": "beyonddancing-472a9.appspot.com"
   },
   "client": [
     {
       "client_info": {
-        "mobilesdk_app_id": "1:610437522620:android:1ba4d5bc8ea748c5",
+        "mobilesdk_app_id": "1:592751149981:android:1ba4d5bc8ea748c5",
         "android_client_info": {
           "package_name": "com.example.android.BeyondDancing"
         }
       },
       "oauth_client": [
         {
-          "client_id": "610437522620-r60a03bls3v6775lie9rik8lfbs9d7k3.apps.googleusercontent.com",
+          "client_id": "592751149981-6bsk716q5227v3l8ep5kkm3kl9qucm34.apps.googleusercontent.com",
           "client_type": 1,
           "android_info": {
             "package_name": "com.example.android.BeyondDancing",
@@ -23,13 +23,13 @@
           }
         },
         {
-          "client_id": "610437522620-ln2ovgsn5lp8emkubjqtmvlbgl2ltgod.apps.googleusercontent.com",
+          "client_id": "592751149981-gbgqnd5u246810343rgmm2u1vvvlchsp.apps.googleusercontent.com",
           "client_type": 3
         }
       ],
       "api_key": [
         {
-          "current_key": "AIzaSyAcleoZumbB9Yj23LJbMTjx5Rrs4L4Ht68"
+          "current_key": "AIzaSyC7tcOMiMDA3467GKCWgmYxotO_bYj4ZCg"
         }
       ],
       "services": {
@@ -40,7 +40,7 @@
           "status": 2,
           "other_platform_oauth_client": [
             {
-              "client_id": "610437522620-ln2ovgsn5lp8emkubjqtmvlbgl2ltgod.apps.googleusercontent.com",
+              "client_id": "592751149981-gbgqnd5u246810343rgmm2u1vvvlchsp.apps.googleusercontent.com",
               "client_type": 3
             }
           ]

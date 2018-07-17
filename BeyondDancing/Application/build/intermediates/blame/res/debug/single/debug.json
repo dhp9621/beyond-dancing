@@ -1096,6 +1096,10 @@
         "source": "/home/tony/.gradle/caches/transforms-1/files-1.1/appcompat-v7-27.1.1.aar/b7f25d5b3d579644bbef480a41214eec/res/layout/abc_activity_chooser_view_list_item.xml"
     },
     {
+        "merged": "/home/tony/Documents/beyond-dancing/BeyondDancing/Application/build/intermediates/res/merged/debug/menu_signout_menu.xml.flat",
+        "source": "/home/tony/Documents/beyond-dancing/BeyondDancing/Application/src/main/res/menu/signout_menu.xml"
+    },
+    {
         "merged": "/home/tony/Documents/beyond-dancing/BeyondDancing/Application/build/intermediates/res/merged/debug/drawable-mdpi-v4_abc_btn_switch_to_on_mtrl_00012.9.png.flat",
         "source": "/home/tony/.gradle/caches/transforms-1/files-1.1/appcompat-v7-27.1.1.aar/b7f25d5b3d579644bbef480a41214eec/res/drawable-mdpi-v4/abc_btn_switch_to_on_mtrl_00012.9.png"
     },

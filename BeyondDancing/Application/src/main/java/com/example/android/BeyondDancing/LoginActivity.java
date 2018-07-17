@@ -64,22 +64,25 @@ public class LoginActivity extends Activity {
 
                 AsyncHttpClient client = new AsyncHttpClient();
                 RequestParams params = new RequestParams("oauth_token", idToken);
-                client.post("http://10.0.2.2:5000/auth/google", params, new AsyncHttpResponseHandler() {
+                client.post("https://beyond-dancing-backend.herokuapp.com/auth/google" ,params, new AsyncHttpResponseHandler() {
                     @Override
                     public void onSuccess(int statusCode, Header[] headers, byte[] responseBody) {
                         Log.d(TAG, "Google sign in passes David");
+                        setResult(RESULT_OK);
+                        finish();
                     }
 
                     @Override
                     public void onFailure(int statusCode, Header[] headers, byte[] responseBody, Throwable error) {
                         Log.w(TAG, "signInResult:failed code=" + statusCode);
-
+                        setResult(RESULT_CANCELED);
+                        finish();
                     }
                 });
 
             } catch (ApiException e) {
                 // Google Sign In failed, update UI appropriately
-                Log.w(TAG, "signInResult:failed code=" + e.getStatusCode());
+                Log.w(TAG, "signInResult:failed code=" + e.getStatusCode()+"|"+e.getLocalizedMessage());
                 Toast.makeText(this, "Sign in failed", Toast.LENGTH_LONG).show();
 
             }
