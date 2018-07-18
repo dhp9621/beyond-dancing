@@ -39,9 +39,11 @@ import android.hardware.camera2.CameraMetadata;
 import android.hardware.camera2.CaptureRequest;
 import android.hardware.camera2.params.StreamConfigurationMap;
 import android.media.MediaRecorder;
+import android.os.AsyncTask;
 import android.os.Bundle;
 import android.os.Handler;
 import android.os.HandlerThread;
+import android.os.Looper;
 import android.support.annotation.NonNull;
 import android.support.v13.app.FragmentCompat;
 import android.support.v4.app.ActivityCompat;
@@ -56,8 +58,22 @@ import android.view.ViewGroup;
 import android.widget.Button;
 import android.widget.Toast;
 
+import com.loopj.android.http.AsyncHttpClient;
+import com.loopj.android.http.AsyncHttpResponseHandler;
+import com.loopj.android.http.JsonHttpResponseHandler;
+import com.loopj.android.http.RequestParams;
+
+import org.json.JSONArray;
+import org.json.JSONObject;
+
+import java.io.DataOutputStream;
 import java.io.File;
+import java.io.FileInputStream;
+import java.io.FileNotFoundException;
 import java.io.IOException;
+import java.net.HttpURLConnection;
+import java.net.MalformedURLException;
+import java.net.URL;
 import java.util.ArrayList;
 import java.util.Collections;
 import java.util.Comparator;
@@ -66,6 +82,8 @@ import java.util.Observable;
 import java.util.Observer;
 import java.util.concurrent.Semaphore;
 import java.util.concurrent.TimeUnit;
+
+import cz.msebera.android.httpclient.Header;
 
 public class Camera2VideoFragment extends Fragment
         implements View.OnClickListener, FragmentCompat.OnRequestPermissionsResultCallback,Observer {
@@ -78,6 +96,7 @@ public class Camera2VideoFragment extends Fragment
     private static final String TAG = "Camera2VideoFragment";
     private static final int REQUEST_VIDEO_PERMISSIONS = 1;
     private static final String FRAGMENT_DIALOG = "dialog";
+    private final String SERVER_URL = "https://beyond-dancing-backend.herokuapp.com/uploadVideo";
 
     private static final String[] VIDEO_PERMISSIONS = {
             Manifest.permission.CAMERA,
@@ -712,9 +731,25 @@ public class Camera2VideoFragment extends Fragment
                     Toast.LENGTH_SHORT).show();
             Log.d(TAG, "Video saved: " + mNextVideoAbsolutePath);
         }
+        UploadAsyncTask u = new UploadAsyncTask(mNextVideoAbsolutePath);
+        u.execute();
         mNextVideoAbsolutePath = null;
         startPreview();
     }
+    class UploadAsyncTask extends AsyncTask<Void, Void, Void> {
+        String Path;
+        @Override
+        protected Void doInBackground(Void... voids) {
+            uploadFile(Path);
+            return null;
+        }
+
+        public UploadAsyncTask(String Path) {
+            super();
+            this.Path = Path;
+        }
+    }
+
    //mvc stuff
     @Override
     public void update(Observable o, Object arg) {
@@ -798,6 +833,119 @@ public class Camera2VideoFragment extends Fragment
                     .create();
         }
 
+    }
+    public int uploadFile(final String selectedFilePath) {
+
+        int serverResponseCode = 0;
+
+        HttpURLConnection connection;
+        DataOutputStream dataOutputStream;
+        String lineEnd = "\r\n";
+        String twoHyphens = "--";
+        String boundary = "*****";
+
+
+        int bytesRead, bytesAvailable, bufferSize;
+        byte[] buffer;
+        int maxBufferSize = 1 * 1024 * 1024;
+        File selectedFile = new File(selectedFilePath);
+
+
+        String[] parts = selectedFilePath.split("/");
+        final String fileName = parts[parts.length - 1];
+
+        try {
+            FileInputStream fileInputStream = new FileInputStream(selectedFile);
+            URL url = new URL(SERVER_URL);
+            connection = (HttpURLConnection) url.openConnection();
+            connection.setDoInput(true);//Allow Inputs
+            connection.setDoOutput(true);//Allow Outputs
+            connection.setUseCaches(false);//Don't use a cached Copy
+            connection.setRequestMethod("POST");
+            connection.setRequestProperty("Connection", "Keep-Alive");
+            connection.setRequestProperty("ENCTYPE", "multipart/form-data");
+            connection.setRequestProperty("Content-Type", "multipart/form-data;boundary=" + boundary);
+            connection.setRequestProperty("uploaded_file", selectedFilePath);
+
+            //creating new dataoutputstream
+            dataOutputStream = new DataOutputStream(connection.getOutputStream());
+
+            //writing bytes to data outputstream
+            dataOutputStream.writeBytes(twoHyphens + boundary + lineEnd);
+            dataOutputStream.writeBytes("Content-Disposition: form-data; name=\"uploaded_file\";filename=\""
+                    + selectedFilePath + "\"" + lineEnd);
+
+            dataOutputStream.writeBytes(lineEnd);
+
+            //returns no. of bytes present in fileInputStream
+            bytesAvailable = fileInputStream.available();
+            //selecting the buffer size as minimum of available bytes or 1 MB
+            bufferSize = Math.min(bytesAvailable, maxBufferSize);
+            //setting the buffer as byte array of size of bufferSize
+            buffer = new byte[bufferSize];
+
+            //reads bytes from FileInputStream(from 0th index of buffer to buffersize)
+            bytesRead = fileInputStream.read(buffer, 0, bufferSize);
+
+            //loop repeats till bytesRead = -1, i.e., no bytes are left to read
+            while (bytesRead > 0) {
+                //write the bytes read from inputstream
+                dataOutputStream.write(buffer, 0, bufferSize);
+                bytesAvailable = fileInputStream.available();
+                bufferSize = Math.min(bytesAvailable, maxBufferSize);
+                bytesRead = fileInputStream.read(buffer, 0, bufferSize);
+            }
+
+            dataOutputStream.writeBytes(lineEnd);
+            dataOutputStream.writeBytes(twoHyphens + boundary + twoHyphens + lineEnd);
+
+            serverResponseCode = connection.getResponseCode();
+            String serverResponseMessage = connection.getResponseMessage();
+
+            Log.i(TAG, "Server Response is: " + serverResponseMessage + ": " + serverResponseCode);
+
+            //response code of 200 indicates the server status OK
+            if (serverResponseCode == 200) {
+            }
+
+            //closing the input and output streams
+            fileInputStream.close();
+            dataOutputStream.flush();
+            dataOutputStream.close();
+
+
+        } catch (FileNotFoundException e) {
+            e.printStackTrace();
+        } catch (MalformedURLException e) {
+            e.printStackTrace();
+
+        } catch (IOException e) {
+            e.printStackTrace();
+        }
+        Handler mainHandler = new Handler(Looper.getMainLooper());
+        Runnable myRunnable = new Runnable() {
+            @Override
+            public void run() {
+                AsyncHttpClient client = new AsyncHttpClient();
+                RequestParams params = new RequestParams("email", "tzhang995@gmail.com");
+                client.post("https://beyond-dancing-backend.herokuapp.com/getUserVideos" ,params, new JsonHttpResponseHandler() {
+                    @Override
+                    public void onSuccess(int statusCode, Header[] headers, JSONObject response) {
+                        super.onSuccess(statusCode, headers, response);
+                        Log.d(TAG, "Google sign in passes David1"+ response.toString());
+                    }
+
+                    @Override
+                    public void onSuccess(int statusCode, Header[] headers, JSONArray response) {
+                        super.onSuccess(statusCode, headers, response);
+                        Log.d(TAG, "Google sign in passes David2"+ response.toString());
+                    }
+                });
+            }
+        };
+
+        mainHandler.post(myRunnable);
+        return serverResponseCode;
     }
 
 }
