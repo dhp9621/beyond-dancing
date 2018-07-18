@@ -740,7 +740,9 @@ public class Camera2VideoFragment extends Fragment
         String Path;
         @Override
         protected Void doInBackground(Void... voids) {
-            uploadFile(Path);
+            Upload u = new Upload();
+            String msg = u.uploadVideo(Path);
+            Log.d(TAG, "Hello2"+msg);
             return null;
         }
 
@@ -922,29 +924,6 @@ public class Camera2VideoFragment extends Fragment
         } catch (IOException e) {
             e.printStackTrace();
         }
-        Handler mainHandler = new Handler(Looper.getMainLooper());
-        Runnable myRunnable = new Runnable() {
-            @Override
-            public void run() {
-                AsyncHttpClient client = new AsyncHttpClient();
-                RequestParams params = new RequestParams("email", "tzhang995@gmail.com");
-                client.post("https://beyond-dancing-backend.herokuapp.com/getUserVideos" ,params, new JsonHttpResponseHandler() {
-                    @Override
-                    public void onSuccess(int statusCode, Header[] headers, JSONObject response) {
-                        super.onSuccess(statusCode, headers, response);
-                        Log.d(TAG, "Google sign in passes David1"+ response.toString());
-                    }
-
-                    @Override
-                    public void onSuccess(int statusCode, Header[] headers, JSONArray response) {
-                        super.onSuccess(statusCode, headers, response);
-                        Log.d(TAG, "Google sign in passes David2"+ response.toString());
-                    }
-                });
-            }
-        };
-
-        mainHandler.post(myRunnable);
         return serverResponseCode;
     }
 

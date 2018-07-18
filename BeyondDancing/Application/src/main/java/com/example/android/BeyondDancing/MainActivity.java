@@ -6,6 +6,8 @@ import android.content.Context;
 import android.content.Intent;
 import android.os.AsyncTask;
 import android.os.Bundle;
+import android.os.Handler;
+import android.os.Looper;
 import android.support.annotation.NonNull;
 import android.support.annotation.Nullable;
 import android.support.design.widget.NavigationView;
@@ -95,6 +97,30 @@ public class MainActivity extends AppCompatActivity{
         videoFragment = new ListViewFragment();
         FragmentManager fragmentManager = getFragmentManager();
         fragmentManager.beginTransaction().add(R.id.content_frame, videoFragment).commit();
+
+        Handler mainHandler = new Handler(Looper.getMainLooper());
+        Runnable myRunnable = new Runnable() {
+            @Override
+            public void run() {
+                AsyncHttpClient client = new AsyncHttpClient();
+                RequestParams params = new RequestParams("email", "tzhang995@gmail.com");
+                client.post("https://beyond-dancing-backend.herokuapp.com/getUserVideos" ,params, new JsonHttpResponseHandler() {
+                    @Override
+                    public void onSuccess(int statusCode, Header[] headers, JSONObject response) {
+                        super.onSuccess(statusCode, headers, response);
+                        Log.d("Get Videos", "Videos1"+ response.toString());
+                    }
+
+                    @Override
+                    public void onSuccess(int statusCode, Header[] headers, JSONArray response) {
+                        super.onSuccess(statusCode, headers, response);
+                        Log.d("Get Videos", "Videos2"+ response.toString());
+                    }
+                });
+            }
+        };
+
+        mainHandler.post(myRunnable);
     }
 
     @Override
