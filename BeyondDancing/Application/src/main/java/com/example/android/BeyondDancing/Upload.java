@@ -52,6 +52,7 @@ public class Upload {
             conn.setRequestProperty("Content-Type", "multipart/form-data;boundary=" + boundary);
             conn.setRequestProperty("myFile", fileName);
             conn.setRequestProperty("email", "tzhang995@gmail.com");
+            conn.setRequestProperty("title", "samplexxx");
             dos = new DataOutputStream(conn.getOutputStream());
 
             dos.writeBytes(twoHyphens + boundary + lineEnd);
